@@ -27,7 +27,7 @@ the idea is really simple, and can be summed up like this:
 * ability to call and retrieve stored lists of values by name
 * ability to load one object into memory at a time
 
-h4. what makes this harder than you would think
+## what makes this harder than you would think
 
 The complexity arises from the need to de-duplicate records. For example, if you have previously written some object
 defined by id=1, and want to send a new object defined by id=1 then it should be an update operation instead of a write
@@ -35,7 +35,7 @@ operation. The database will need to know where the object defined as id=1 is lo
 Replacing the data may not mean overwriting the data, it could be updating an index with the new data location, and 
 setting a task to clean up the old data location.
 
-h4. some notes about nosql data stores
+## some notes about nosql data stores
 
 the main point of nosql is that disk space is no longer a concern therefore let's stop holding back performance with it. 
 furthermore, if disk space is no longer a concern let's store large objects instead of tiny representations of data. 
